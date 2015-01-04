@@ -1,0 +1,21 @@
+{
+  "name": "Mp3 Tag",
+  "description": "An ID3 tag editing (Mp3 Tagging) utilty for Firefox OS",
+  "launch_path": "/index.html",
+    "icons": {
+    "16": "/icons/icon16x16.png",
+    "48": "/icons/icon48x48.png",
+    "60": "/icons/icon60x60.png",
+    "128": "/icons/icon128x128.png"
+  },
+   "developer": {
+    "name": "Rajat Kosh",
+    "url": "http://sourceforge.net/projects/idteid3tagedito/"
+  },
+  "default_locale": "en",
+  "type": "privileged",
+  "permissions": {
+    "device-storage:music":   { "access": "readwrite" },
+    "device-storage:sdcard":   { "access": "readwrite" }
+  }
+}

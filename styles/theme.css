@@ -1,0 +1,19 @@
+div#contents{
+  width: 95%;
+  text-align: center;
+  align-content:  center;
+  margin-left: 2.5%;
+}
+
+label{
+  text-align: left;
+  text-shadow:  inherit;
+}
+
+div#hdn{
+ visibility: hidden; 
+}
+
+#fileBrowser{
+  display: none;
+}

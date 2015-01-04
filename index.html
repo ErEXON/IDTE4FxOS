@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">   
+	  <script src="scripts/jquery-2.1.3.min.js" defer></script>
+      <script src="scripts/jquery.mobile-1.4.5.min.js" defer></script>
+      <script src="scripts/readtag.js" defer></script>
+      <script src="scripts/controls.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles/jquery.mobile-1.4.5.min.css">
+  </head>
+  <body>
+  
+    <div data-role="header">
+      <h1>
+         	 MP3 Tag
+      </h1>
+    </div>
+    
+   <div id="contents">
+    <content>
+         <div class="ui-field-contain">
+            <input type="text" data-disabled="true" data-inline="true" name="" id="file" value="Select File for Tagging">
+						<input type="button" data-icon="plus" data-inline="true" name="browse-btn" onclick="clickUpload()" id="browse-btn" value="Browse">
+				</div>
+    
+        <div data-role="footer">
+          <h1>
+               Tag Information
+          </h1>
+        </div>
+      
+		<label for="artist" ><b>Artist:</b></label>
+		<input type="text" id="Artist"  value="" data-mini="true">
+            
+		<label for="album" ><b>Album:</b></label>
+		<input type="text" id="Album"  value="" data-mini="true">
+            
+		<label for="title" ><b>Title:</b></label>
+		<input type="text" id="title"  value="" data-mini="true">
+            
+		<label for="track" ><b>Track:</b></label>
+		<input type="text" id="track"  value="" data-mini="true">
+            
+		<label for="year" ><b>Year:</b></label>
+		<input type="text" id="year"  value="" data-mini="true">
+            
+		<label for="genre" ><b>Genre:</b></label>
+		<input type="text" id="genre"  value="" data-mini="true">
+            
+		<label for="albart" ><b>Album Artist:</b></label>
+		<input type="text" id="albart"  value="" data-mini="true">
+      
+		<label for="comment" ><b>Comments:</b></label>
+		<input type="text" id="comment"  value="" data-mini="true">
+    
+		<div data-role="footer">
+			<h1>
+					Album Art
+			</h1>
+		</div> 
+	 	<br>
+			<img src="UI/cover.png" class="Img" alt="">	
+		<label for="covType"><b></b></label>
+		<input type="button" data-inline="true" id="addbtn" data-icon="plus" data-iconpos="notext" value="Add">
+		<input type="button" data-inline="true" id="rembtn" data-icon="minus" data-iconpos="notext" value="Remove">
+		<!-- <input type="button" data-inline="true" id="cngbtn" data-icon="recycle" value="Change"> -->
+	  
+	  
+				<div data-role="footer">
+          <h1>
+               Unsynchronised Lyrics
+          </h1>
+        </div>
+		
+			<div class="ui-field-contain">
+				<label for="lyrics"><b>Lyrics:</b></label>
+				<textarea name="lyrics" id="Lyrics"></textarea>
+			</div>
+      
+			<div data-role="footer" >
+				<h1>
+					Save Tag 
+				</h1>
+			</div> 
+			<input type="button" data-inline="true" id="savebtn" data-icon="check" value="Save">
+			<input type="button" data-inline="true" id="exit" data-icon="delete" value="Cancel">
+			<!-- <input type="button" data-inline="true" id="top" data-icon="carat-u" value="Top"> -->	
+	  		 <input type="file" id="fileBrowser" onchange="displayName()">
+		 </content>
+   </div>
+	 
+	 <footer data-role="footer" >
+      <h1>
+         	Brought to you by Team IDTE
+      </h1>
+   </footer>
+   
+   </body>
+</html>
