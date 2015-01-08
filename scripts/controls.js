@@ -1,30 +1,35 @@
-  var brwseBtn = document.getElementById("browse-btn");
-  // Must be a reference to a function name, not a function call.
-  brwseBtn.onclick = clickUpload;
+$(document).ready(function(){
+  $("#browse-btn").click(function(){
+	      locate();
+		});
+  
+    });
+
+function locate(){
+var act = new MozActivity({
+    name: 'pick',
+    data: {
+      type: 'audio/mpeg'
+       }
+    });
+    act.onsuccess = function() {
+       index = 0; // For Getting the Current Position of the File Pointer
+        console.log("File opened successfuly");
+        var blobSrc = this.result.blob; //Source blob
+        // Show filename onto the Screen for User Convinence   
+        document.getElementById("file").value = blobSrc.name.replace(/^.*[\\\/]/, '');
+          // Start Tag Reading
+        parseAudio(blobSrc); 
+    }
+    act.onerror = function() {
+        console.log("The activity encouter an error: " + this.error);
+        alert("No File Selected");
+     }    
+}
 
 function clickUpload(){
   document.getElementById("fileBrowser").click();
   var nameBtn = document.getElementById("fileBrowser");
   nameBtn.onchange = displayName;
-  
+    
 }
-
-function displayName(){
-  var ext = document.getElementById("fileBrowser").value;
-  document.getElementById("file").value = ext;
-}
-
-function msg(){
-  alert("Tapped");
-}
-
-var button = document.getElementById('browse-btn');
-button.addEventListener('click', function(){
-})
-
-function initElement() {
-  console.log("Initialized Sucessfully");
-  var p = document.getElementById("browse-btn");
-  // Must be a reference to a function name, not a function call.
-  p.onclick = clickUpload;
-};

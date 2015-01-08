@@ -17,3 +17,7 @@ div#hdn{
 #fileBrowser{
   display: none;
 }
+
+#data{
+  display: none;
+}
